@@ -6,7 +6,7 @@ jobs:
   Build:
 
     docker: 
-      - image: circleci/node:10.16.3
+      - image: circleci/node:13.8.0
 
     steps:
       - checkout
@@ -16,7 +16,7 @@ jobs:
   test:
 
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:13.8.0
 
     steps:
       - checkout
@@ -27,7 +27,7 @@ jobs:
   analyze:
 
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:13.8.0
 
     steps:
       - checkout
