@@ -10,9 +10,8 @@ jobs:
 
     steps:
       - checkout
-      - run:
+      - run: npm run lint
           #name: "lint code"
-          command: npm run lint
 
   test:
 
@@ -21,9 +20,10 @@ jobs:
 
     steps:
       - checkout
-      - run:
+      - run: npm run test
           #name: "run test"
-          command: npm run test        
+
+
   analyze:
 
     docker:
@@ -31,10 +31,8 @@ jobs:
 
     steps:
       - checkout
-      - run:
+      - run: npm audit
           #name: "audit"
-          command: npm audit
-
 
 
 workflows:
